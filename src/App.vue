@@ -1,10 +1,10 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import {
-    todoSelectors,
-    addTodo,
-    removeTodo,
-    fetchRandomTodo
+  todoSelectors,
+  addTodo,
+  removeTodo,
+  fetchRandomTodo
 } from "./store/slices/todoSlice";
 import { store, useSelector } from "./store/store";
   const newTodo = ref(null);
@@ -21,9 +21,7 @@ import { store, useSelector } from "./store/store";
         newLoading => (todoListLoading.value = newLoading)
     )
   })
-  
 
-  
 </script>
 
 <template>
@@ -40,14 +38,12 @@ import { store, useSelector } from "./store/store";
   </button>
   <h1 v-if="todoListLoading">Loading...</h1>
   <ul>
-    
-      <li v-for="(item, idx) in todoList" :key="idx">
-        {{ item }}
-        <button class="btn" @click="() => store.dispatch(removeTodo(item))">
-          Remove
-        </button>
-      </li>
-    
+    <li v-for="(todo, idx) in todoList" :key="idx">
+      {{ todo }}
+      <button class="btn" @click="() => store.dispatch(removeTodo(todo))">
+        Remove
+      </button>
+    </li>
   </ul>
 </main>
 </template>
