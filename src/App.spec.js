@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom'
 import { test, describe, expect, vi } from "vitest";
-import { render, screen, fireEvent } from "@testing-library/vue";
+import { render, screen } from "@testing-library/vue";
 import userEvent from "@testing-library/user-event";
 import App from './App.vue'
 
