@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
+    "jsdom": "^22.0.0",
     "vue": "^3.2.47"
   },
   "devDependencies": {
